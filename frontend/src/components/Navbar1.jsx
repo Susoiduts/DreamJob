@@ -7,8 +7,8 @@ function Navbar1() {
     <>
       <Navbar bg="light" variant="light">
         <Container>
-          <Navbar.Brand></Navbar.Brand>
-          <Nav className="me-auto">
+          <Navbar.Brand>Dream Job</Navbar.Brand>
+          <Nav className="me-right">
             {/* <Nav.Link href="/">Find a Job</Nav.Link>
             <Nav.Link href="/newjob">Create a Job Offer</Nav.Link> */}
             <NavLink
