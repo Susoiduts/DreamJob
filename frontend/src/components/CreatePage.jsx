@@ -30,7 +30,7 @@ const post = (e) => {
     .catch(err=> console.log(err))
 }
   return (
-    <div className='row'>
+    <div className='container'>
     <div className='col-6 offset-3 mt-4 text-center '>
         <h4 className='mb-5'>Here you can post a new job</h4>
     <form onSubmit={post} className='d-flex flex-column gap-2 '  >

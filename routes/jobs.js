@@ -14,8 +14,8 @@ jobsRouter.get("/", getAllJobs);
 // create a job
 jobsRouter.post("/createjob", createJob);
 // delete a job
-jobsRouter.delete("/:id", deleteJob)
+jobsRouter.delete("/delete/:id", deleteJob)
 //update a job
-jobsRouter.put("/:id", updateJob)
+jobsRouter.put("/update/:id", updateJob)
 
 module.exports = { jobsRouter };

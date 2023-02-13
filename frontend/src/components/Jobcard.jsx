@@ -4,22 +4,20 @@ import {useState,useEffect} from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-export default function Jobcard({jobData}) {
+export default function Jobcard({jobData, key}) {
 
   return (
-    <div className='col-8  text-center'>
-    <Card bg="secondary" text="light" border="light"  key="key1">
+    <Card bg="light" text="dark" border="secondary" className="p-3 my-3 col-8 offset-2 text-center" style={{opacity: ".9"}} key={key}>
       <Card.Body>
-        <Card.Title>Title:{jobData.jobtitle}</Card.Title>
-        <Card.Subtitle className="mb-2">Company:{jobData.company}</Card.Subtitle>
-        <Card.Text>
-          Description:{jobData.jobdescription}
-          <br></br>
-          Contact:{jobData.contact}
+        <Card.Title>{jobData.jobtitle}</Card.Title>
+        <Card.Subtitle className="mb-2">at {jobData.company}</Card.Subtitle>
+        <Card.Text className="mb-3">
+          Description: {jobData.jobdescription}
+          <br /><br />
+          Contact: {jobData.contact}
         </Card.Text>
-        <Button variant="success">Apply here</Button>
+        <a href={`mailto:${jobData.contact}`} className="btn btn-success">Apply here</a>
       </Card.Body>
     </Card>
-    </div>
   )
 }

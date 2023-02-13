@@ -3,7 +3,7 @@ import {useState,useEffect} from 'react';
 import axios from 'axios';
 import Jobcard from './components/Jobcard';
 function App() {
-const [jobs,setJobs] = useState([{jobtitle: "job1", company:"company1", jobdescription:"jobdescription1", contact: "contact1"},{jobtitle: "job2", company:"company2", jobdescription:"jobdescription2", contact: "contact2"}])
+const [jobs,setJobs] = useState([])
  
 useEffect(()=>{
 axios
@@ -16,11 +16,13 @@ setJobs(res.data.jobs)})
 ,[])
 
   return (
-    <div className="App container">
+    
+    <div className="App container py-3" >
     {jobs.map((jobData,i) => {
       return <Jobcard jobData={jobData} key={i}/>
     })}
     </div>
+    
   );
 }
 
