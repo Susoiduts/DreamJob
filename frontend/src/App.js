@@ -7,7 +7,7 @@ const [jobs,setJobs] = useState([{jobtitle: "job1", company:"company1", jobdescr
  
 useEffect(()=>{
 axios
-.get('http://localhost:5000')
+.get('https://crossover.onrender.com/')
 .then(res =>{
   console.log(res.data.jobs)
 setJobs(res.data.jobs)})
