@@ -15,8 +15,8 @@ app.use(cors());
 
 app.use("/", jobsRouter)
 
-app.listen(PORT, (req, res) => {
-    console.log(`Server is running on http://localhost:${PORT}`)
+app.listen(port, (req, res) => {
+    console.log(`Server is running on http://localhost:${port}`)
 })
 
 app.get("/", (req, res) => {
