@@ -21,7 +21,7 @@ const post = (e) => {
     e.preventDefault();
     // console.log('sent')
     axios
-    .post("http://localhost:5000/createjob",{
+    .post("https://crossover.onrender.com/createjob",{
         company: data.company,
         jobtitle: data.jobTitle,
         jobdescription: data.jobDescription,
