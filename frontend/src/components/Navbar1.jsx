@@ -11,6 +11,7 @@ function Navbar1() {
           <Nav className="me-auto">
             <Nav.Link href="/">Find a Job</Nav.Link>
             <Nav.Link href="/newjob">Create a Job Offer</Nav.Link>
+            
           </Nav>
         </Container>
       </Navbar>

@@ -31,13 +31,18 @@ const post = (e) => {
 }
   return (
     <div className='row'>
-    <div className='col-12'>
-    <form onSubmit={post} className='d-flex flex-column gap-3' >
-        <input type='text' placeholder='Company name' onChange={(e=>trackInput(e))} id='company' value={data.company}  ></input>
-        <input type='text' placeholder='Job title' onChange={(e=>trackInput(e))} id='jobTitle' value={data.jobTitle}   ></input>
-        <input type='text' placeholder='Job description' onChange={(e=>trackInput(e))} id='jobDescription' value={data.jobDescription}  ></input>
-        <input type='text' placeholder='Contact' onChange={(e=>trackInput(e))} id='contact' value={data.contact}  ></input>
-        <input type='submit'></input>
+    <div className='col-6 offset-3 mt-4 text-center '>
+        <h4 className='mb-5'>Here you can post a new job</h4>
+    <form onSubmit={post} className='d-flex flex-column gap-2 '  >
+        <label>Company name</label>
+        <input type='text'  onChange={(e=>trackInput(e))} id='company' value={data.company} required  ></input>
+        <label>Job title</label>
+        <input type='text' onChange={(e=>trackInput(e))} id='jobTitle' value={data.jobTitle}  required ></input>
+        <label>Job description</label>
+        <input type='text' onChange={(e=>trackInput(e))} id='jobDescription' value={data.jobDescription}  required ></input>
+        <label>Contact</label>
+        <input type='text' onChange={(e=>trackInput(e))} id='contact' value={data.contact} required ></input>
+        <input type='submit' className='btn btn-success mt-3'></input>
     </form>
     </div>
     </div>
